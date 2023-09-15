@@ -6,6 +6,9 @@ LDFLAGS=-L$(GTSAM_DIR)/lib -lgtsam
 
 rotation_example: rotation_example.cpp 
 	$(CXX) $(CXXFLAGS) -o rotation_example rotation_example.cpp $(LDFLAGS)
+	
 
 run: rotation_example
 	export LD_LIBRARY_PATH=$(GTSAM_DIR)/lib:$$LD_LIBRARY_PATH; ./rotation_example
+
+
